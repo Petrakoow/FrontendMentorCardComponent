@@ -1,0 +1,26 @@
+.button {
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    &--card-component {
+        padding: 16px 0;
+        font-family: "Montserrat", sans-serif;
+        background-color: $dark-cyan;
+        font-weight: 700;
+        color: $white;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        transition: 0.3s ease;
+        @media (hover: hover) {
+            &:hover {
+                background-color: $very-dark-cyan;
+            }
+        }
+        @media (hover: none) {
+            &:active {
+                background-color: $very-dark-cyan;
+            }
+        }
+    }
+}
