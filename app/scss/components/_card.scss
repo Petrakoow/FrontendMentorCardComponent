@@ -1,0 +1,68 @@
+.card-component {
+    max-width: 600px;
+    min-width: 320px;
+    &__container {
+        display: flex;
+        border-radius: 10px;
+        margin: 16px;
+        overflow: hidden;
+        background-color: $white;
+        @include breakpoint-down(small) {
+            flex-direction: column;
+        }
+    }
+    @include breakpoint-up(medium) {
+        &__preview,
+        &__information {
+            min-width: 50%;
+        }
+    }
+    &__preview {
+        &--img-format {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__information {
+        padding: 25px;
+    }
+    &__tag {
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 4.5px;
+        font-size: px-to-rem(12px);
+    }
+    &__description {
+        line-height: 1.5;
+        font-size: px-to-rem(13px);
+        margin-bottom: 32px;
+    }
+    &__tag,
+    &__description {
+        font-family: "Montserrat", sans-serif;
+        color: $dark-grayish-blue;
+    }
+    &__title {
+        font-family: "Fraunces", sans-serif;
+        font-size: px-to-rem(32px);
+        margin-bottom: 25px;
+        color: $very-dark-blue;
+    }
+    &__price {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        margin-bottom: 25px;
+        &--new {
+            font-family: "Fraunces", sans-serif;
+            font-size: px-to-rem(32px);
+            color: $dark-cyan;
+        }
+        &--old {
+            font-family: "Montserrat", sans-serif;
+            text-decoration: line-through;
+            font-size: px-to-rem(13px);
+            color: $dark-grayish-blue;
+        }
+    }
+}
